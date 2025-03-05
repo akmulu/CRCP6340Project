@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+      <link rel="icon" type="image/x-icon" href="./images/favicon.gif"> 
+      <title>Contact</title>
+      <meta name="author" content="Akhil Mulukutla">
+      <meta name="description" content="A page to learn about the artist."> 
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+      <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <!--Navigation Bar-->
+  <header>
+    <%- include('header'); %>
+</header>
+
+  
+
+  <!-- Spacer div -->
+  <div class="spacer"></div>
+
+<!-- Added image -->
+<div class="container mt-5 pt-5">
+  <img src="./images/myself.jpeg" alt="Profile Image" class="img-fluid rounded-circle mx-auto d-block" style="max-width: 300px; width: 100%;">
+</div>
+
+
+  <section class="about-me">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>I'm Akhil Mulukutla, a UI/UX designer and creative technologist passionate about crafting intuitive digital experiences. Currently pursuing my Master's in Creative Technology at Southern Methodist University, I'm set to graduate in December 2025.</p>
+      <p>My journey in design began at the University of Texas at Dallas, where I earned my Bachelor's in Arts, Technology, and Emerging Communication in 2022. This foundation fueled my curiosity to blend creativity with cutting-edge technology.</p>
+      <p>What truly excites me is the potential of emerging technologies. From developing AI-powered interviewers to designing digital identity solutions like the Texas ID project, I'm always eager to push the boundaries of what's possible in UX design.</p>
+      
+    </div>
+
+    <!-- Spacer div -->
+  <!-- <div class="spacer" size="50"></div> -->
+  </section>
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+  
+    .about-me {
+      background-color: #000000;
+      color: #ffffff;
+      padding: 50px 0;
+      font-family: 'Michroma', sans-serif;
+      transform:translateY(0px);
+      height: 800px;
+    }
+
+  
+    .container {
+      max-width: 800px;
+      margin: 0 auto; 
+      padding: 0 20px;
+      margin-top: 50px;
+    }
+  
+    h2 {
+      transform:translateY(-0px);
+      font-size: 36px;
+      margin-bottom: 30px;
+    }
+  
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: px;
+    }
+
+  </style>
+      </form>
+      
+
+      <div class="container-fluid">
+        <%- include('footer'); %>
+    </div>
+
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script type="module" src="./js/contact.js"></script>
+</body>
+
+</html>

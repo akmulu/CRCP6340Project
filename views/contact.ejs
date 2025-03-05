@@ -4,7 +4,7 @@
       <meta charset="UTF-8">
       <meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
       <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-      <link rel="icon" type="image/x-icon" href="./images/satellite.jpg"> 
+      <link rel="icon" type="image/x-icon" href="./images/favicon.gif"> 
       <title>Contact</title>
       <meta name="author" content="Akhil Mulukutla">
       <meta name="description" content="A page to contact artist."> 
@@ -14,71 +14,81 @@
 
 <body>
   <!--Navigation Bar-->
-
-  <nav class="navbar navbar-expand-lg navbar-dark bg-black">
-    <div class="container-fluid">
-      <a class="navbar-brand michroma-font" href="#">[AM]</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link custom-nav-link michroma-font" href="index.html">Home</a>
-          </li>
-          <li class="aboutMe">
-            <a class="nav-link custom-nav-link michroma-font" href="#">About Me</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link custom-nav-link michroma-font" href="#">Work</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link custom-nav-link michroma-font" href="contact.html">Contact Me</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  
-  <!--Navigation Bar Styling-->
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
-  
-    .michroma-font {
-      font-family: 'Michroma', sans-serif;
-    }
-  
-    .navbar {
-      background-color: #000000 !important;
-    }
-  
-    .custom-nav-link {
-      color: white !important;
-      transition: color 0.3s ease;
-    }
-  
-    .custom-nav-link:hover {
-      color: #aaaaaa !important;
-    }
-  
-    .navbar-brand {
-      font-size: 1.5rem;
-    }
-  
-    .nav-link {
-      font-size: 1rem;
-    }
-
-    .aboutMe {
-        scroll-behavior: smooth;
-    }
-  </style>
+  <header>
+    <%- include('header'); %>
+</header>
   
   
   <!-- Spacer div -->
   <div class="spacer"></div>
+ 
 
-  <div class="container">
+  <!--Contact Form-->
+  <h3 class="text-center mb-4">Let's hear what you have to say!</h3>
+  <form id="contact-form" class="needs-validation">
+   
+    <div class="row m-5">
+      <div class="col">
+        <input id= "contact-first" type="text" class="form-control" placeholder="First name" aria-label="First name" required>
+      </div>
+      <div class="col">
+        <input id= "contact-last" type="text" class="form-control" placeholder="Last name" aria-label="Last name" required>
+      </div>
+    </div>
+
+    <div class= "row m-5">
+    <div class="mb-3">
+    
+      <input id="contact-email-addr" type="email" class="form-control" id="exampleInputEmail1" placeholder="Email address" aria-describedby="emailHelp">
+      <div id="contact-email-help" class="invalid-feedback">
+        Format should be example@example.com.
+      </div>   
+    </div>
+  </div>
+
+  <div class= "row m-5">
+    <div class="mb-3">
+     
+      <textarea class="form-control" id="contact-question" rows="3" placeholder="Enter your message or comment."></textarea>
+    </div>
+  </div>
+
+    <div class="col m-5 text-center">
+  
+      <button id = "send-contact" name="sendContact" class="btn btn-primary" type="submit">Submit form</button>
+        <span class="m-2" id="contact-button-response"></span>
+        <span class="m-2" id="response"></span>
+      </div> 
+
+  </form>
+  </div>
+
+  <!--Contact Form 1-->
+   <!-- <div class="container">
+    <h2 class="text-center mb-4">Contact</h2>
+  <form action="/mail" method="post">
+    <ul>
+    <li>
+       <label for="name">Name: </label>
+    <input type="text" id="name" name="user_name" />
+    </li>
+    <li>
+        <label for="mail">Email:</label>
+        <input type="email" id="mail" name="user_email" />
+    </li>
+    <li>
+    <label for="msg">Message: </label>
+    <textarea id="msg" name="user_message"></textarea>
+    </Li>
+    <li class="button">
+    <button id="contact-form-button" type="submit">Send your message</button>
+    </Li>
+    </ul>
+    </form> -->
+
+
+      <!--Contact Form 2: My attempt at crreating one-->
+  <!-- <div class="container">
     <h2 class="text-center mb-4">Contact</h2>
     <form action="/mail" method="post" class="contact-form">
       <div class="mb-3">
@@ -97,7 +107,7 @@
         <button type="submit" class="btn btn-primary">Send your message</button>
       </div>
     </form>
-  </div>
+  </div> -->
   
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
@@ -121,43 +131,57 @@
       color: #ffffff;
     }
   
-    .form-label {
+    label {
       font-weight: bold;
     }
   
-    .form-control {
+    input {
       background-color: #333333;
       border: 1px solid #444444;
       border-radius: 5px;
       color: #ffffff;
+      position: center;
+    }
+
+    textarea {
+      background-color: #333333;
+      border: 1px solid #444444;
+      border-radius: 5px;
+      color: #ffffff;
+      position: center;
     }
   
-    .form-control:focus {
+    input:focus {
       background-color: #444444;
       border-color: #007bff;
       color: #ffffff;
       box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+      position: center;
     }
   
-    .btn-primary {
+    button {
       background-color: #007bff;
       border: none;
       padding: 10px 20px;
       font-size: 16px;
       transition: background-color 0.3s ease;
+      position: center;
     }
   
-    .btn-primary:hover {
+    button:hover {
       background-color: #0056b3;
     }
   </style>
-  
 
-          
       </form>
       
+      <div class="container-fluid">
+        <%- include('footer'); %>
+    </div>
+
+
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-    <script type="module" src="./js/index.js"></script>
+    <script type="module" src="./js/contact.js"></script>
 </body>
 
 </html>

@@ -1,9 +1,95 @@
-html {
+/* styles.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+
+body {
+    padding-top: 100px;
+    background-color: black;
+}
+
+.michroma-font {
+    font-family: 'Michroma', sans-serif;
+}
+
+.navbar {
+    background-color: #000000 !important;
+}
+
+.navbar-container {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.navbar-nav .nav-item {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.navbar-brand {
+    margin-right: 20px;
+}
+
+
+.custom-nav-link {
+    color: white !important;
+    transition: color 0.3s ease;
+}
+
+.custom-nav-link:hover {
+    color: #aaaaaa !important;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    font-size: 1rem;
+}
+
+.aboutMe {
+    scroll-behavior: smooth;
+}
+
+.transparent-header {
+    background-color: black;
+    padding: 60px 0 40px;
+    text-align: center;
+}
+
+.name-title {
+    font-family: 'Michroma', sans-serif;
+    font-size: 48px;
+    color: white;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+.banner spline-viewer {
+    transform: scale(1.5) translateY(100px);
+    height: 750px;
+    width: auto;
     box-sizing: border-box;
 }
 
-*, 
-*:before,
-*:after {
-    box-sizing: inherit;
+.banner {
+    overflow: hidden;
+    margin-top: 0px;
 }
+
+footer {
+    background-color: black;
+    color: white;
+}
+
+footer hr {
+    width: 50%;
+    margin: 0 auto;
+    opacity: 0.5;
+    height: 1px;
+}
+
+footer .michroma-font {
+    font-family: 'Michroma', sans-serif;
+}
+
